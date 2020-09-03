@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Challenge Read File</title>
+        <style>
+            body {
+              background-color: linen;
+            }
+            
+            h1 {
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              color:brown;
+              margin-left: 10px;
+            }
+
+            p {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                margin-left: 10px;
+            }
+
+            .output {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 20px;
+                font-weight: bold;
+                margin-left: 10px;
+            }
+
+            table, th, td {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 16px;
+                border: 1px solid black;
+                border-collapse: collapse;
+                margin-left: 10px;
+                margin-top: 10px;
+            }
+            th, td {
+                padding: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Challenge Read File </h1>
+        <p>Click on the button below and open the file weather.dat.</p>
+        <p>The table, that opens, is ordered by the minimum temperature range. </p>
+        <p id="errorMessage"></p>
+        <p class="output"></p>
+
+        <br>
+        <table></table>
+
+        <!-- Js file -->
+        <script src="readerWeather.js"></script>
+        
+    </body>
+</html>
