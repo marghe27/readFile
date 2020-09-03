@@ -3,16 +3,15 @@
 ////////////////////////
 
 try {
- 
+        /** "element" è il bottone per sfogliare i file  */
+        /** "element" is the button to search the file  */
         let element = document.createElement('input');
         element.setAttribute('type', "file");
         element.setAttribute('id', "btnOpenFile");
         element.onchange = function(){
             readText(this, event);
             }
-               
-            /** hide the input button */
-            /* nascondo il bottone sfoglia */
+            
             element.style.display = 'block';
             element.style.marginLeft = '10px';
             document.body.appendChild(element);
@@ -20,8 +19,6 @@ try {
             let table = document.querySelector("table");
             table.before(element);
            
-            /** "element" è il bottone per sfogliare i file  */
-            /** "element" is the button to search the file  */
             element.click();
 
           
@@ -46,7 +43,7 @@ try {
                   };//end onload()
           
                   reader.readAsText(filePath.files[0]);
-                  //reader.onerror = errorHandler;
+                  
             }//end if 
             else { 
                   errorHandler();
@@ -138,11 +135,9 @@ try {
                 return a["Range"] - b["Range"];  
                 });
         
-        console.log("day with minimum range: "+datArray[0]["Dy"]); // output 14 (day with minimum range)(giorno col minimo range ) 
-        console.log("day with maximum range: "+datArray[datArray.length-1]["Dy"]); // output 9 (day with maximum range)(giorno col massimo range )
+        console.log("day with minimum range: "+datArray[0]["Dy"]); // output 14 (day with minimum range)(giorno col minimo range ); 
+        console.log("day with maximum range: "+datArray[datArray.length-1]["Dy"]); // output 9 (day with maximum range)(giorno col massimo range );
           
-                  
-        //let table = document.querySelector("table");
           
         let dataheaders = Object.keys(datArray[0]);
         //console.log("dataheaders "+dataheaders);
@@ -168,8 +163,7 @@ try {
             if(rowIndex == 1 && cellIndex == 0 || rowIndex == 0) {
                 alert('The 14th day is the one with the\n\rminimum temperature range.\n\rThis is 2.');
             }
-        //alert('Row = ' + rowIndex + ', Column = ' + cellIndex);
-
+        
         }
     }
           
